@@ -10,28 +10,26 @@ import Foundation
 struct MemoryGame<CardContent> where CardContent: Equatable {
     private (set) var cards: Array<Card>
     
-    private var indexOfTheOneAndOnlyFaceUpCard: Int?
+    var indexOfTheOneAndOnlyFaceUpCard: Int? {
+        get { cards.indices.filter({ cards[$0].isFaceUp }).oneAndOnly }
+        set {cards.indices.forEach{ cards[$0].isFaceUp = ($0 == newValue)}}
+    }
     
     mutating func choose(_ card: Card){
-        if let choosenIndex = cards.firstIndex(where: {$0.id == card.id}),
+        if let choosenIndex = cards.firstIndex(where: { $0.id == card.id }),
             !cards[choosenIndex].isFaceUp,
             !cards[choosenIndex].isMatched
         {
             if let potentialMatchIndex = indexOfTheOneAndOnlyFaceUpCard {
-                if cards[choosenIndex].content == cards [potentialMatchIndex].content {
+                if cards[choosenIndex].content == cards[potentialMatchIndex].content {
                     cards[choosenIndex].isMatched = true
-                    cards[choosenIndex].isMatched = true
+                    cards[potentialMatchIndex].isMatched = true
                 }
-                indexOfTheOneAndOnlyFaceUpCard = nil
+                cards[choosenIndex].isFaceUp = true
             } else {
-                for index in cards.indices {
-                    cards[index].isFaceUp = false
-                }
                 indexOfTheOneAndOnlyFaceUpCard = choosenIndex
             }
-            cards[choosenIndex].isFaceUp.toggle()
-        }
-        print("\(cards)")
+        } 
     }
     
     func index(of card: Card) -> Int? {
@@ -52,12 +50,20 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         }
     }
     
-    
-    
     struct Card: Identifiable{
         var isFaceUp: Bool = false
         var isMatched: Bool = false
-        var content: CardContent
-        var id: Int
+        let content: CardContent
+        let id: Int
+    }
+}
+
+extension Array {
+    var oneAndOnly: Element? {
+        if count == 1 {
+            return first
+        } else {
+            return nil
+        }
     }
 }

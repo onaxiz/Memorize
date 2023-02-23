@@ -10,7 +10,7 @@
 		D73CE652296B8E0500673959 /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73CE651296B8E0500673959 /* MemoryGame.swift */; };
 		D73CE654296B97FD00673959 /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73CE653296B97FD00673959 /* EmojiMemoryGame.swift */; };
 		D7FA76EB2940B4EA00437539 /* MemorizeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FA76EA2940B4EA00437539 /* MemorizeApp.swift */; };
-		D7FA76ED2940B4EA00437539 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FA76EC2940B4EA00437539 /* ContentView.swift */; };
+		D7FA76ED2940B4EA00437539 /* EmojiMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FA76EC2940B4EA00437539 /* EmojiMemoryGameView.swift */; };
 		D7FA76EF2940B4EC00437539 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7FA76EE2940B4EC00437539 /* Assets.xcassets */; };
 		D7FA76F32940B4EC00437539 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7FA76F22940B4EC00437539 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -20,7 +20,7 @@
 		D73CE653296B97FD00673959 /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
 		D7FA76E72940B4EA00437539 /* Memorize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7FA76EA2940B4EA00437539 /* MemorizeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeApp.swift; sourceTree = "<group>"; };
-		D7FA76EC2940B4EA00437539 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D7FA76EC2940B4EA00437539 /* EmojiMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGameView.swift; sourceTree = "<group>"; };
 		D7FA76EE2940B4EC00437539 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7FA76F02940B4EC00437539 /* Memorize.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Memorize.entitlements; sourceTree = "<group>"; };
 		D7FA76F22940B4EC00437539 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -56,10 +56,10 @@
 		D7FA76E92940B4EA00437539 /* Memorize */ = {
 			isa = PBXGroup;
 			children = (
-				D73CE653296B97FD00673959 /* EmojiMemoryGame.swift */,
 				D73CE651296B8E0500673959 /* MemoryGame.swift */,
+				D73CE653296B97FD00673959 /* EmojiMemoryGame.swift */,
+				D7FA76EC2940B4EA00437539 /* EmojiMemoryGameView.swift */,
 				D7FA76EA2940B4EA00437539 /* MemorizeApp.swift */,
-				D7FA76EC2940B4EA00437539 /* ContentView.swift */,
 				D7FA76EE2940B4EC00437539 /* Assets.xcassets */,
 				D7FA76F02940B4EC00437539 /* Memorize.entitlements */,
 				D7FA76F12940B4EC00437539 /* Preview Content */,
@@ -145,7 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7FA76ED2940B4EA00437539 /* ContentView.swift in Sources */,
+				D7FA76ED2940B4EA00437539 /* EmojiMemoryGameView.swift in Sources */,
 				D7FA76EB2940B4EA00437539 /* MemorizeApp.swift in Sources */,
 				D73CE652296B8E0500673959 /* MemoryGame.swift in Sources */,
 				D73CE654296B97FD00673959 /* EmojiMemoryGame.swift in Sources */,
@@ -273,6 +273,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Memorize/Preview Content\"";
+				DEVELOPMENT_TEAM = 469HWU6NKT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -309,6 +310,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Memorize/Preview Content\"";
+				DEVELOPMENT_TEAM = 469HWU6NKT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
